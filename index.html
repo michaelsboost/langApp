@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>langApp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="description" content="Learn Arabic for English Speakers with ArabEngo.">
+    <meta name="author" content="Michael Schwartz">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="logo.ico">
+    <link rel="SHORTCUT ICON" href="logo.ico">
+    <link rel="stylesheet" href="libraries/polyui/polyui.css">
+    <link rel="stylesheet" href="libraries/alertify/themes/alertify.core.css" />
+    <link rel="stylesheet" href="libraries/alertify/themes/alertify.default.css" />
+    <link rel="stylesheet" href="libraries/font-awesome/font-awesome.css" />
+    <link rel="stylesheet" href="libraries/font-awesome/macset.css" />
+    <link rel="stylesheet" href="css/skills-tree.css" />
+    <link rel="stylesheet" href="css/lessongrid.css" />
+    <link rel="stylesheet" href="css/vars.css" />
+    <script src="libraries/jquery/jquery.js"></script>
+    <script src="libraries/alertify/alertify.min.js"></script>
+    <script src="libraries/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="libraries/slick/slick.min.js"></script>
+  </head>
+  <body>
+    <!-- Background -->
+    <div class="bgi"></div>
+    <div class="bgc"></div>
+
+    <!-- Skill Tree -->
+    <div class="skills-tree-container">
+      <div class="grid learning-courses">
+        <div class="skillstree txtcenter">
+          <div class="grid__col--12 skilltree txtcenter">
+            <div>
+              <a class="introduction pointer" href="skills/introduction.html">
+                <span class="skill"></span>
+                <p>Introduction</p>
+              </a>
+            </div>
+            <a class="alphabet pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Alphabet</p>
+            </a>
+            <a class="basics1 basic pointer" href="skills/basics1.html">
+              <span class="skill"></span>
+              <p>Basics 1</p>
+            </a>
+            <!--
+            <a class="basics2 basic pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Basics 2</p>
+            </a>
+            <a class="phrases pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Phrases</p>
+            </a>
+            <a class="food pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Food</p>
+            </a>
+            <a class="animals pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Animals</p>
+            </a>
+            <a class="plurals pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Plurals</p>
+            </a>
+            <a class="possession pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Possession</p>
+            </a>
+            <a class="clothing pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Clothing</p>
+            </a>
+            <a class="questions pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Questions</p>
+            </a>
+            <a class="present1 run pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Present 1</p>
+            </a>
+            <a class="colors art pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Colors</p>
+            </a>
+            <a class="conjunctions magnet pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Conjunctions</p>
+            </a>
+            <a class="family pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Family</p>
+            </a>
+            <a class="prepositions pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Prepositions</p>
+            </a>
+            <a class="time pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Time</p>
+            </a>
+            <a class="household pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Household</p>
+            </a>
+            <a class="sizes pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Sizes</p>
+            </a>
+            <a class="occupation pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Occupation</p>
+            </a>
+            <a class="adject1 adject pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Adject. 1</p>
+            </a>
+            <a class="present2 run pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Present 2</p>
+            </a>
+            <a class="determin cog pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Determin.</p>
+            </a>
+            <a class="adverbs pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Adverbs</p>
+            </a>
+            <a class="objects pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Objects</p>
+            </a>
+            <a class="tobe pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>To Be</p>
+            </a>
+            <a class="places pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Places</p>
+            </a>
+            <a class="people pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>People</p>
+            </a>
+            <a class="objpronouns people pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Obj. Pronouns</p>
+            </a>
+            <a class="numbers pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Numbers</p>
+            </a>
+            <a class="pasttense run pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Past Tense</p>
+            </a>
+            <a class="present3 run pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Present 3</p>
+            </a>
+            <a class="countries flag pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Countries</p>
+            </a>
+            <a class="adject2 adject pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Adject 2</p>
+            </a>
+            <a class="pronouns people pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Pronouns</p>
+            </a>
+            <a class="direction pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Direction</p>
+            </a>
+            <a class="education pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Education</p>
+            </a>
+            <a class="participle run pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Participle</p>
+            </a>
+            <a class="feelings pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Feelings</p>
+            </a>
+            <a class="nature pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Nature</p>
+            </a>
+            <a class="sports pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Sports</p>
+            </a>
+            <a class="medical pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Medical</p>
+            </a>
+            <a class="business pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Business</p>
+            </a>
+            <a class="communication pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Communication</p>
+            </a>
+            <a class="spiritual pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Spiritual</p>
+            </a>
+            <a class="future run pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Future</p>
+            </a>
+            <a class="arts art pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Arts</p>
+            </a>
+            <a class="politics pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Politics</p>
+            </a>
+            <a class="science pointer" href="javascript:alertify.log('coming soon...')">
+              <span class="skill"></span>
+              <p>Science</p>
+            </a>
+            -->
+
+            <!-- 
+            <span class="added-skill">
+              <a class="add pointer">
+                <span class="skill"></span>
+                <p>Added Skill</p>
+              </a>
+            </span>
+            <div class="add-a-skill">
+              <a class="addskill pointer">
+                <span class="add-skill"></span>
+                <p>Add Skill</p>
+              </a>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preloader -->
+    <!-- <div class="hide table lightbluishoverlay spinner">
+      <div class="cell">
+        <div class="loading"></div>
+        <h2>Loading lesson...</h2>
+      </div>
+    </div> -->
+  </body>
+</html>

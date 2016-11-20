@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LangApp: Full Lesson Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <link rel="stylesheet" href="../../css/lessons.css">
+    <script src="../../libraries/jquery/jquery.js"></script>
+    <script src="../../libraries/alertify/alertify.min.js"></script>
+  </head>
+  <body>
+    <script src="../../js/responsivevoice.js"></script>
+    <script src="../../js/annyang.min.js"></script>
+    <script src="../../js/speechkitt.min.js"></script>
+    <script src="../../js/lessons.js"></script>
+    
+    <!--Lesson Pages-->
+    <input id="speak" type="checkbox">
+    <input id="1" type="radio" name="lesson" checked>
+    <!--How do you say ...?-->
+    <div class="page 1">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline arb ques" data-meaning="hello">مرحبا</span>"?
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12 list txtcenter">
+          <p>&nbsp;</p>
+          <button class="btn--default addword wrong">good morning</button>
+          <button class="btn--default addword wrong">goodbye</button>
+          <button class="btn--default addword correct answer">hello</button>
+          <button class="btn--default addword wrong">woman</button>
+        </div>
+      </div>
+    </div>
+    <input id="2" type="radio" name="lesson">
+
+    <!--Which one of these is ...?-->
+    <div class="page 2">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato';">
+        Which one of these is "<span class="pointer underline eng ques">man</span>"?
+      </div>
+      
+      <div class="cards-container txtcenter">
+        <a class="card correct answer pointer">
+          <h2 class="arb">رجل</h2>
+
+          <img src="../../imgs/basics/man.jpg">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">امراه</h2>
+
+          <img src="../../imgs/basics/woman.png">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">بنت</h2>
+
+          <img src="../../imgs/basics/girl.jpg">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">ولد</h2>
+
+          <img src="../../imgs/basics/boy.jpg">
+        </a>
+      </div>
+    </div>
+    <input id="3" type="radio" name="lesson">
+
+    <!--Which one of these is ...?-->
+    <div class="page 3">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato';">
+        Which one of these is "<span class="pointer underline eng ques">woman</span>"?
+      </div>
+
+      <div class="cards-container txtcenter">
+        <a class="card wrong pointer">
+          <h2 class="arb">رجل</h2>
+
+          <img src="../../imgs/basics/man.jpg">
+        </a>
+        <a class="card correct answer pointer">
+          <h2 class="arb">امراه</h2>
+
+          <img src="../../imgs/basics/woman.png">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">بنت</h2>
+
+          <img src="../../imgs/basics/girl.jpg">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">ولد</h2>
+
+          <img src="../../imgs/basics/boy.jpg">
+        </a>
+      </div>
+    </div>
+    <input id="4" type="radio" name="lesson">
+
+    <!--How do you say ...?-->
+    <div class="page 4">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline arb ques" data-meaning="man">رجل</span>"?
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12 list txtcenter">
+          <p>&nbsp;</p>
+          <button class="btn--default addword correct answer">man</button>
+          <button class="btn--default addword wrong">goodbye</button>
+          <button class="btn--default addword wrong">woman</button>
+          <button class="btn--default addword wrong">hello</button>
+        </div>
+      </div>
+    </div>
+    <input id="5" type="radio" name="lesson">
+
+    <!--How do you say ...? = typing exercise-->
+    <div class="page 5">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="مرحبا">hello</span>"?
+      </div>
+      
+      <div class="hide answer">مرحبا</div>
+      
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="6" type="radio" name="lesson">
+
+    <!--What was said ...? = typing exercise-->
+    <div class="page 6">
+      <span class="invisible arb ques answer">امراه</span>
+      
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>
+          What was said?
+        </p>
+      </div>
+
+      <div class="txtcenter">
+        <a class="ib pointer hear xxx-large">
+          <i class="fa fa-volume-up" style="transform: scale(0.8);"></i>
+        </a>
+      </div>
+
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="7" type="radio" name="lesson">
+
+    <!--Which one of these is ...?-->
+    <div class="page 7">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato';">
+        Which one of these is "<span class="pointer underline eng ques">girl</span>"?
+      </div>
+      
+      <div class="cards-container txtcenter">
+        <a class="card wrong pointer">
+          <h2 class="arb">رجل</h2>
+
+          <img src="../../imgs/basics/man.jpg">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">امراه</h2>
+
+          <img src="../../imgs/basics/woman.png">
+        </a>
+        <a class="card correct answer pointer">
+          <h2 class="arb">بنت</h2>
+
+          <img src="../../imgs/basics/girl.jpg">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">ولد</h2>
+
+          <img src="../../imgs/basics/boy.jpg">
+        </a>
+      </div>
+    </div>
+    <input id="8" type="radio" name="lesson">
+
+    <!--What was said?-->
+    <div class="page 8">
+      <span class="invisible arb ques">بنت</span>
+      
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>
+          What was said?
+        </p>
+        <p>&nbsp;</p>
+      </div>
+      
+      <div class="txtcenter">
+        <a class="ib pointer hear xxx-large">
+          <i class="fa fa-volume-up" style="transform: scale(0.8);"></i>
+        </a>
+      </div>
+      
+      <div class="grid">
+        <div class="grid__col--12 list txtcenter">
+          <p>&nbsp;</p>
+          <button class="btn--default addword correct answer">girl</button>
+          <button class="btn--default addword wrong">man</button>
+          <button class="btn--default addword wrong">hello</button>
+          <button class="btn--default addword wrong">woman</button>
+        </div>
+      </div>
+    </div>
+    <input id="9" type="radio" name="lesson">
+
+    <!--How do you say ...? = typing exercise-->
+    <div class="page 9">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="رجل">man</span>"?
+      </div>
+      
+      <div class="hide answer">رجل</div>
+      
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="10" type="radio" name="lesson">
+
+    <!--How do you say ...? = typing exercise-->
+    <div class="page 10">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="بنت">girl</span>"?
+      </div>
+      
+      <div class="hide answer">بنت</div>
+      
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="11" type="radio" name="lesson">
+
+    <!--How do you say ...?-->
+    <div class="page 11">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="انا">I; I am; Me</span>"?
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12 list txtcenter">
+          <p>&nbsp;</p>
+          <button class="btn--default arb addword wrong">مرحبا</button>
+          <button class="btn--default arb addword wrong">امراه</button>
+          <button class="btn--default arb addword correct answer">انا</button>
+          <button class="btn--default arb addword wrong">ولد</button>
+        </div>
+      </div>
+    </div>
+    <input id="12" type="radio" name="lesson">
+
+    <!--Which one of these is ...?-->
+    <div class="page 12">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato';">
+        Which one of these is "<span class="pointer underline eng ques">boy</span>"?
+      </div>
+      
+      <div class="cards-container txtcenter">
+        <a class="card wrong pointer">
+          <h2 class="arb">رجل</h2>
+
+          <img src="../../imgs/basics/man.jpg">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">امراه</h2>
+
+          <img src="../../imgs/basics/woman.png">
+        </a>
+        <a class="card wrong pointer">
+          <h2 class="arb">بنت</h2>
+
+          <img src="../../imgs/basics/girl.jpg">
+        </a>
+        <a class="card correct answer pointer">
+          <h2 class="arb">ولد</h2>
+
+          <img src="../../imgs/basics/boy.jpg">
+        </a>
+      </div>
+    </div>
+    <input id="13" type="radio" name="lesson">
+
+    <!--Select the missing word ...?-->
+    <div class="page 13">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        Select the missing word "<span class="pointer underline arb ques" data-meaning="I am; I am a ...">... انا</span>"?
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12 list txtcenter">
+          <p>&nbsp;</p>
+          <button class="btn--default arb addword wrong">مع السلامه</button>
+          <button class="btn--default arb addword wrong">شكرا</button>
+          <button class="btn--default arb addword wrong">مرحبا</button>
+          <button class="btn--default arb addword correct answer">ولد</button>
+        </div>
+      </div>
+    </div>
+    <input id="14" type="radio" name="lesson">
+
+    <!--How do you say ...? = typing exercise-->
+    <div class="page 14">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="انا ولد">I am a boy</span>"?
+      </div>
+      
+      <div class="hide answer">انا ولد</div>
+      
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="15" type="radio" name="lesson">
+
+    <!--How do you say ...? = typing exercise-->
+    <div class="page 15">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="انا رجل">I am a man</span>"?
+      </div>
+      
+      <div class="hide answer">انا رجل</div>
+      
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="16" type="radio" name="lesson">
+
+    <!--How do you say ...?-->
+    <div class="page 16">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="مع السلامه">goodbye</span>"?
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12 list txtcenter">
+          <p>&nbsp;</p>
+          <button class="btn--default arb addword wrong">مرحبا</button>
+          <button class="btn--default arb addword wrong">شكرا</button>
+          <button class="btn--default arb addword wrong">اهلا</button>
+          <button class="btn--default arb addword correct answer">مع السلامه</button>
+        </div>
+      </div>
+    </div>
+    <input id="17" type="radio" name="lesson">
+
+    <!--How do you say ...? = typing exercise-->
+    <div class="page 17">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="مع السلامه">goodbye</span>"?
+      </div>
+      
+      <div class="hide answer">مع السلامه</div>
+      
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="18" type="radio" name="lesson">
+
+    <!--How do you say ...?-->
+    <div class="page 18">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="اهلا">welcome</span>"?
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12 list txtcenter">
+          <p>&nbsp;</p>
+          <button class="btn--default arb addword wrong">مرحبا</button>
+          <button class="btn--default arb addword wrong">شكرا</button>
+          <button class="btn--default arb addword correct answer">اهلا</button>
+          <button class="btn--default arb addword wrong">مع السلامه</button>
+        </div>
+      </div>
+    </div>
+    <input id="19" type="radio" name="lesson">
+
+    <!--How do you say ...? = typing exercise-->
+    <div class="page 19">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        How do you say "<span class="pointer underline eng ques" data-meaning="اهلا">welcome</span>"?
+      </div>
+      
+      <div class="hide answer">اهلا</div>
+      
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="20" type="radio" name="lesson">
+
+    <!--What was said ...? = typing exercise-->
+    <div class="page 20">
+      <span class="invisible arb ques answer">مع السلامه</span>
+      
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato'; cursor: default;">
+        <p>&nbsp;</p>
+        <p>
+          What was said?
+        </p>
+      </div>
+
+      <div class="txtcenter">
+        <a class="ib pointer hear xxx-large">
+          <i class="fa fa-volume-up" style="transform: scale(0.8);"></i>
+        </a>
+      </div>
+
+      <div id="charmenu" class="charmenu txtcenter">
+        <a class="pointer" data-char="0">ي</a>
+        <a class="pointer" data-char="1">و</a>
+        <a class="pointer" data-char="2">ه</a>
+        <a class="pointer" data-char="3">ن</a>
+        <a class="pointer" data-char="4">م</a>
+        <a class="pointer" data-char="5">ل</a>
+        <a class="pointer" data-char="6">ك</a>
+        <a class="pointer" data-char="7">ق</a>
+        <a class="pointer" data-char="8">ف</a>
+        <a class="pointer" data-char="9">غ</a>
+        <a class="pointer" data-char="10">ع</a>
+        <a class="pointer" data-char="11">ظ</a>
+        <a class="pointer" data-char="12">ط</a>
+        <a class="pointer" data-char="13">ض</a>
+        <a class="pointer" data-char="14">ص</a>
+        <a class="pointer" data-char="15">ش</a>
+        <a class="pointer" data-char="16">س</a>
+        <a class="pointer" data-char="17">ز</a>
+        <a class="pointer" data-char="18">ر</a>
+        <a class="pointer" data-char="19">ذ</a>
+        <a class="pointer" data-char="20">د</a>
+        <a class="pointer" data-char="21">خ</a>
+        <a class="pointer" data-char="22">ح</a>
+        <a class="pointer" data-char="23">ج</a>
+        <a class="pointer" data-char="24">ث</a>
+        <a class="pointer" data-char="25">ت</a>
+        <a class="pointer" data-char="26">ب</a>
+        <a class="pointer" data-char="27">ا</a>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--12">
+          <div>
+            <p>&nbsp;</p>
+            <input class="userSentence txtcenter">
+            <p></p>
+            <button class="btn--default fill checkSentence">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col--8 wordlist txtcenter">
+          <button class="btn--default addword block" style="width: 100%;">&nbsp;</button>
+        </div>
+        <div class="grid__col--4">
+          <button class="btn--default delword fr" style="background: #fff;">
+            <img class="nomar" src="../../imgs/backspace.svg" alt="backspace">
+          </button>
+        </div>
+      </div>
+    </div>
+    <input id="21" type="radio" name="lesson">
+
+    <!--End of the lesson-->
+    <div class="page 21 end">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato';">
+        <br><br>
+        You've completed <span data-document="title"></span>
+        <p>&nbsp;</p>
+      </div>
+      
+      <div class="grid">
+        <div class="grid__col--12">
+          <h2>You scored!</h2>
+          <h1>
+            <span data-correct="amount">0</span> out of 20
+          </h1>
+        </div>
+      </div>
+      
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      
+      <div class="grid">
+        <div class="grid__col--12 txtcenter">
+          <a href="../../skills/basics1.html" class="btn--default fill pointer">
+            Back
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Speaking Tips -->
+    <div class="tips">
+      <div class="txtcenter" style="font: 400 normal normal 24px/2 'Lato';">
+        <br><br>
+        General tips on how to pass a speaking exercise:
+        <p>&nbsp;</p>
+      </div>
+      
+      <div class="grid">
+        <div class="grid__col--12">
+          <p>
+            <i class="fa fa-circle" style="transform: scale(0.6);"></i>
+            Speak aloud and close to the microphone.
+          </p>
+          <p>
+            <i class="fa fa-circle" style="transform: scale(0.6);"></i>
+            Don't speak slowly. Speak at a natural pace.
+          </p>
+          <p>
+            <i class="fa fa-circle" style="transform: scale(0.6);"></i>
+            For beginners, focus more on the whole sentence. Don't get stuck on 1~2 mispronounced words.
+          </p>
+        </div>
+      </div>
+      
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      
+      <div class="grid">
+        <div class="grid__col--12 txtcenter">
+          <label for="speak" class="btn--default fill pointer">
+            Back
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <!--Translation tooltip-->
+    <div class="translation hide">
+      <i class="fa fa-caret-up"></i>
+      
+      <div class="text"></div>
+    </div>
+  </body>
+</html>

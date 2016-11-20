@@ -1,0 +1,166 @@
+/* Center DIVs Vertically and Horizontally */
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Global Misc Classes */
+.pointer {
+  cursor: pointer;
+}
+.txtcenter {
+  text-align: center;
+}
+.txtleft {
+  text-align: left;
+}
+.txtright {
+  text-align: right;
+}
+.fc {
+  float: center;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.fn {
+  float: none;
+}
+.block {
+  display: block;
+}
+.ib {
+  display: inline-block;
+}
+.hide {
+  display: none;
+}
+.invisible {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.fill {
+  width: 100%;
+}
+.wauto {
+  width: auto;
+}
+.hauto {
+  height: auto;
+}
+.wfill {
+  width: 100%;
+  height: 100%;
+}
+.nomar {
+  margin: 0;
+}
+.notopmar {
+  margin-top: 0;
+}
+.nobtmmar {
+  margin-bottom: 0;
+}
+.nolftmar {
+  margin-left: 0;
+}
+.norgtmar {
+  margin-right: 0;
+}
+.bold {
+  font-weight: bold;
+}
+.bold-heading {
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 20px;
+}
+.breakword {
+  /*word-wrap: break-word;*/
+  white-space: pre-line;
+}
+.coverbg {
+  /*background-position: top left;*/
+  background-size: cover;
+}
+.topfill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.blacktxt {
+  color: #000;
+}
+.darkgraytxt {
+  color: #333;
+}
+.graytxt {
+  color: #686868;
+}
+.noborderradius {
+  border-radius: 0;
+}
+.noborder {
+  border: 0;
+}
+.nobg {
+  background: transparent;
+}
+.bgposc {
+  background-position: center;
+}
+.bgnorept {
+  background-repeat: no-repeat;
+}
+.bgs100p {
+  background-size: 100%;
+}
+.question:after {
+  content: "Question Type:"
+}
+.cdefault {
+  cursor: default;
+}
+.xx-large {
+  font-size: xx-large;
+}
+.xxx-large {
+  font-size: 5em;
+}
+
+/* Misc Var Classes */
+.lightbluishoverlay {
+  background: rgba(194, 184, 243, 0.8);
+}
+.underline,
+.underline-links a {
+  text-decoration: underline;
+}
+.modintoh2 {
+  margin-bottom: 0.4em;
+}
+.fz30 {
+  font-size: 30px;
+}
+.notxtsel {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */      
+}

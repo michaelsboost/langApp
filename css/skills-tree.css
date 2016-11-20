@@ -1,0 +1,245 @@
+body {
+  /*background-color: #b7fef0;*/
+  /*background-color: #c7ecfe;*/
+  background-color: #FFF1CC;
+}
+.bgi, .bgc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.bgi {
+  background-color: #FFF1CC;
+  background-image: url("../imgs/FreeVector-Mayan-Pyramid-Vector.svg");
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.bgc {
+  /*background-color: #b7fef0;*/
+  background-color: #c7ecfe;
+  opacity: .8;
+}
+
+.skills-tree-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+/* Skills Grid */
+.skillstree {
+  width: 640px;
+  margin: 0 auto;
+  padding: 3em 1em;
+}
+.skillnotavailable {
+  opacity: .5;
+}
+
+@media all and (max-width:680px) {
+  .skillstree {
+    width: auto;
+    padding: 3em 0;
+  }
+}
+.learning-courses a {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.skill, .add-skill {
+  padding: 2.56em;
+  transition: all 150ms ease;
+}
+.learning-courses a:not(.skillnotavailable):hover .skill,
+.learning-courses a:not(.skillnotavailable):hover .add-skill {
+  opacity: .5;
+}
+.skill, .add-skill  {
+  display: inline-block;
+  border-radius: 25em;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.skillstree a:nth-child(5n+1) > .skill {
+  background-color: #ff7f92;
+}
+.skillstree a:nth-child(5n+3) > .skill {
+  background-color: #7fffae;
+}
+.skillstree a:nth-child(5n+5) > .skill {
+  background-color: #56bcf3;
+}
+.skillstree a:nth-child(5n+4) > .skill {
+  background-color: #f78cef;
+}
+.skillstree a:nth-child(5n+2) > .skill {
+  background-color: #e3e27f;
+}
+.skillstree a:nth-child(2) > .skill {
+  background-color: #e3d400;
+}
+.skillnotavailable > .skill {
+  background-color: #dbdbdb!important;
+}
+
+.skillstree .introduction > .skill {
+  background-image: url("../imgs/book.svg");
+}
+.skillstree .alphabet > .skill {
+  background-image: url("../imgs/alphabet.svg");
+}
+.skillstree .basic > .skill {
+  background-image: url("../imgs/pencil.svg");
+}
+.skillstree .phrases > .skill {
+  background-image: url("../imgs/speech.svg");
+  background-size: 62%;
+}
+.skillstree .food > .skill {
+  background-image: url("../imgs/apple.svg");
+}
+.skillstree .animals > .skill {
+  background-color: #e3e27f;
+  background-image: url("../imgs/animal.svg");
+  background-size: 60%;
+}
+.skillstree .plurals > .skill {
+  background-image: url("../imgs/stars.svg");
+}
+.skillstree .possession > .skill {
+  background-image: url("../imgs/box.svg");
+}
+.skillstree .clothing > .skill {
+  background-image: url("../imgs/clothing.svg");
+}
+.skillstree .questions > .skill {
+  background-image: url("../imgs/question.svg");
+}
+.skillstree .run > .skill {
+  background-color: #e3e27f;
+  background-image: url("../imgs/run.svg");
+  background-size: 60%;
+}
+.skillstree .art > .skill {
+  background-image: url("../imgs/art.svg");
+  background-size: 60%;
+}
+.skillstree .conjunctions > .skill {
+  background-image: url("../imgs/magnet.svg");
+  background-size: 60%;
+}
+.skillstree .family > .skill {
+  background-image: url("../imgs/pacifier.svg");
+}
+.skillstree .prepositions > .skill {
+  background-image: url("../imgs/prepositions.svg");
+  background-size: 60%;
+}
+.skillstree .time > .skill {
+  background-color: #d7daa6;
+  background-image: url("../imgs/clock.svg");
+}
+.skillstree .household > .skill {
+  background-image: url("../imgs/toilet.svg");
+  background-size: 60%;
+}
+.skillstree .sizes > .skill {
+  background-image: url("../imgs/mountain.svg");
+}
+.skillstree .occupation > .skill {
+  background-image: url("../imgs/crown.svg");
+  background-size: 70%;
+}
+.skillstree .adject > .skill {
+  background-image: url("../imgs/thumbup.svg");
+  background-size: 70%;
+}
+.skillstree .cog > .skill {
+  background-image: url("../imgs/cog.svg");
+}
+.skillstree .adverbs > .skill {
+  background-image: url("../imgs/sound-vibe.svg");
+}
+.skillstree .objects > .skill {
+  background-image: url("../imgs/glasses.svg");
+  background-size: 70%;
+}
+.skillstree .tobe > .skill {
+  background-image: url("../imgs/diamond.svg");
+  background-size: 70%;
+}
+.skillstree .places > .skill {
+  background-color: #e3e27f;
+  background-image: url("../imgs/location.svg");
+  background-size: 63%;
+}
+.skillstree .people > .skill {
+  background-image: url("../imgs/group.svg");
+  background-size: 55%;
+}
+.skillstree .numbers > .skill {
+  background-image: url("../imgs/circle.svg");
+  background-size: 70%;
+}
+.skillstree .countries > .skill {
+  background-image: url("../imgs/flag.svg");
+}
+.skillstree .direction > .skill {
+  background-image: url("../imgs/compass.svg");
+  background-size: 65%;
+}
+.skillstree .education > .skill {
+  background-image: url("../imgs/education.svg");
+  background-size: 70%;
+}
+.skillstree .feelings > .skill {
+  background-image: url("../imgs/heart.svg");
+  background-size: 58%;
+}
+.skillstree .nature > .skill {
+  background-image: url("../imgs/flower.svg");
+  background-size: 60%;
+}
+.skillstree .sports > .skill {
+  background-image: url("../imgs/sports.svg");
+  background-size: 60%;
+}
+.skillstree .medical > .skill {
+  background-image: url("../imgs/medical.svg");
+  background-size: 60%;
+}
+.skillstree .business > .skill {
+  background-image: url("../imgs/business.svg");
+  /*background-image: url("../imgs/shake.svg");*/
+  background-size: 60%;
+}
+.skillstree .communication > .skill {
+  background-image: url("../imgs/phone.svg");
+}
+.skillstree .spiritual > .skill {
+  background-image: url("../imgs/ghost.svg");
+}
+.skillstree .politics > .skill {
+  background-image: url("../imgs/politics.svg");
+  background-size: 60%;
+}
+.skillstree .science > .skill {
+  background-image: url("../imgs/science.svg");
+  background-size: 60%;
+}
+/*.skillstree .add > .skill {
+  background-image: url("../imgs/add.svg");
+}*/
+.skillstree .addskill > .add-skill {
+  background-image: url("../imgs/addskill.svg");
+  background-size: 100%;
+  opacity: .7;
+}

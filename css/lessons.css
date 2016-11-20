@@ -1,0 +1,52 @@
+@import url("../libraries/polyui/polyui.css");
+@import url("../libraries/alertify/themes/alertify.core.css");
+@import url("../libraries/alertify/themes/alertify.default.css");
+@import url("../libraries/font-awesome/font-awesome.css");
+@import url("../libraries/font-awesome/macset.css");
+@import url("lessongrid.css");
+@import url("vars.css");
+
+body > input {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+}
+body > .page,
+.tips {
+  display: none;
+}
+
+.translation {
+  position: absolute;
+  text-align: center;
+  padding: 0 15px;
+  color: #fff;
+  background-color: #4d6167;
+  background-color: #rgba(0, 0, 0, 0.64);
+  border-radius: 6px;
+}
+.translation > i {
+  display: block;
+  position: relative;
+  top: -11px;
+  color: #4d6167;
+  color: #rgba(0, 0, 0, 0.64);
+}
+.translation > div {
+  position: relative;
+  top: -8px;
+}
+
+.tips {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  overflow: auto;
+}
+
+[type=radio]:checked + .page,
+#speak:checked ~ .tips {
+  display: block;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>langApp: Test Chat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <link rel="stylesheet" href="../../css/chat.css">
+    <script src="../../libraries/jquery/jquery.js"></script>
+    <script src="../../libraries/alertify/alertify.min.js"></script>
+    <script src="../../js/responsivevoice.js"></script>
+  </head>
+  <body>
+    <div class="contact-bar">
+      <!--Contact Gender MUST be male or female-->
+      <i class="contact-pic fa fa-user"></i> <span data-gender="male">Michael Khoury</span>
+    </div>
+    
+    <div class="chat-container">
+      <div class="chat-history">
+        <!--
+          Bot talks, you talk, bot talks, you talk...
+          That's how the app is configured.
+          Chat ends when the bot says goodbye, followed by your goodbye response.
+        -->
+        
+        <div class="them msg">
+          <p class="message" data-meaning="Welcome!">Welcome!</p>
+        </div>
+        <div class="tar you msg hide">
+          <p class="message" data-meaning="Hello!">Hello!</p>
+        </div>
+        <div class="them msg hide">
+          <p class="message" data-meaning="My name is ...">My name is ...</p>
+        </div>
+        <div class="tar you msg hide">
+          <p class="message" data-meaning="Nice to meet you">Nice to meet you</p>
+        </div>
+        <div class="them msg hide">
+          <p class="message" data-meaning="Thanks you too">Thanks you too</p>
+        </div>
+        <div class="tar you msg hide">
+          <p class="message" data-meaning="How are you?">How are you?</p>
+        </div>
+        <div class="them msg hide">
+          <p class="message" data-meaning="I'm good and you?">I'm good and you?</p>
+        </div>
+        <div class="tar you msg hide">
+          <p class="message" data-meaning="I'm good. Thank you!">I'm good. Thank you!</p>
+        </div>
+        <div class="them msg hide">
+          <p class="message" data-meaning="Goodbye">Goodbye</p>
+        </div>
+        <div class="tar you msg hide">
+          <p class="message" data-meaning="Goodbye">Goodbye</p>
+        </div>
+        <div class="them msg hide">
+          <p class="message"></p>
+        </div>
+      </div>
+      
+      <div class="them typingloader hide">
+        <div class="message">
+          <div class="typing">
+            <div class="load1"></div>
+            <div class="load2"></div>
+            <div class="load3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Hold shift for capital letters-->
+    <input type="checkbox" id="shift" class="hide">
+    
+    <div class="bottom-bar">
+      <div class="preview">
+        <h1></h1>
+      </div>
+      <div class="keyboard notxtsel">
+        <div>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button>0</button>
+        </div>
+        <div data-action="lowercasetxt">
+          <div>
+            <button>q</button>
+            <button>w</button>
+            <button>e</button>
+            <button>r</button>
+            <button>t</button>
+            <button>y</button>
+            <button>u</button>
+            <button>i</button>
+            <button>o</button>
+            <button>p</button>
+            <button>a</button>
+          </div>
+          <div>
+            <button>s</button>
+            <button>d</button>
+            <button>f</button>
+            <button>g</button>
+            <button>h</button>
+            <button>j</button>
+            <button>k</button>
+            <button>l</button>
+            <button>z</button>
+            <button>x</button>
+            <button>c</button>
+          </div>
+          <div>
+            <button>v</button>
+            <button>b</button>
+            <button>n</button>
+            <button>m</button>
+            <button>#</button>
+            <button>'</button>
+            <button>,</button>
+            <button>.</button>
+            <button>!</button>
+            <button>?</button>
+            <label for="shift" class="ignore">
+              shift
+            </label>
+          </div>
+        </div>
+        <div class="hide" data-action="uppercasetxt">
+          <div>
+            <button>Q</button>
+            <button>W</button>
+            <button>E</button>
+            <button>R</button>
+            <button>T</button>
+            <button>Y</button>
+            <button>U</button>
+            <button>I</button>
+            <button>O</button>
+            <button>P</button>
+            <button>A</button>
+          </div>
+          <div>
+            <button>S</button>
+            <button>D</button>
+            <button>F</button>
+            <button>G</button>
+            <button>H</button>
+            <button>J</button>
+            <button>K</button>
+            <button>L</button>
+            <button>Z</button>
+            <button>X</button>
+            <button>C</button>
+          </div>
+          <div>
+            <button>V</button>
+            <button>B</button>
+            <button>N</button>
+            <button>M</button>
+            <button>#</button>
+            <button>'</button>
+            <button>,</button>
+            <button>.</button>
+            <button>!</button>
+            <button>?</button>
+            <label for="shift" class="ignore">
+              shift
+            </label>
+          </div>
+        </div>
+        <div>
+          <button class="spacebar"> </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../js/chat.js"></script>
+  </body>
+</html>

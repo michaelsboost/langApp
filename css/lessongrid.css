@@ -1,0 +1,242 @@
+body {
+  background-color: #c2f0fe;
+}
+
+/* Lesson Grid */
+.lessons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 3em 0;
+  background-color: #b5d7fb;
+  text-align: left;
+  overflow: auto;
+}
+.lessons-container .lesson-note,
+.lessons-container .lesson-flyer {
+  display: inline-block;
+  width: calc(100vw/2.3);
+  max-width: 300px;
+  padding: 1em 2.76em;
+  margin: 1em;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 
+              inset 0 0 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.lessons-container .lesson-note {
+  background-image: url(../imgs/thumb-tack.svg);
+  background-position: 50% 6px;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+.lessons-container .lesson-note h2,
+.lessons-container .lesson-flyer h2 {
+  font-weight: bold;
+  color: #525559;
+}
+.gotolesson {
+  display: block;
+  width: 100%;
+}
+@media all and (max-width:850px) {
+  .lessons-container > .lesson-note,
+  .lessons-container > .lesson-flyer {
+    width: calc(100vw/2.3);
+  }
+}
+@media all and (max-width:586px) {
+  .lessons-container {
+    text-align: center;
+    padding: 1em 0;
+  }
+  .lessons-container .lesson-note,
+  .lessons-container .lesson-flyer {
+    display: block;
+    margin: 3em auto 0 auto;
+    width: 90%;
+  }
+}
+
+/* Alphabet */
+.alphgrid {
+  width: 25%!important;
+}
+/* Alphabet Tablet */
+@media all and (max-width:980px) {
+  .alphgrid {
+    width: 30%!important;
+  }
+}
+/* Alphabet Phone */
+@media all and (max-width:866px) {
+  .alphgrid {
+    width: 50%!important;
+  }
+}
+@media all and (max-width:600px) {
+  .alphgrid {
+    width: 100%!important;
+  }
+}
+
+/* Card Grid */
+.cards-container {
+  padding: 3em 0;
+  overflow: auto;
+}
+.cards-container > .card {
+  display: inline-block;
+  width: calc(100vw/3);
+  padding: 1em 0;
+  margin: 1em;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 
+              inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+.cards-container > .card h2 {
+  font-weight: bold;
+  color: #525559;
+  margin: 0 0 1em 0;
+}
+.cards-container > .card img {
+/*  height: 125px;*/
+  height: calc(100vh/5);
+}
+
+/* Sentence Structures */
+.lesson {
+  position: absolute;
+  /* top: 97px; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 2em;
+}
+.lesson [data-asound] {
+  font-size: 2em;
+}
+.lesson [data-letter] {
+  font-size: 7em;
+}
+.addword {
+  display: inline-block;
+  width: initial;
+  text-transform: none;
+}
+[data-word] {
+  padding-bottom: 2px;
+  border-bottom: 1px dotted #4a4a4a;
+}
+[data-word]::before,
+[data-word]::after {
+  content: attr(data-word);
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity .6s;
+}
+[data-word]:hover::before {
+  content: "\f0d8";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-decoration: inherit;
+
+  position: absolute;
+  margin-top: 3px;
+  right: 60px;
+  font-size: 1.5em;
+  width: auto;
+  height: auto;
+  color: #4a4a4a;
+  opacity: 1;
+}
+[data-word]:hover::after {
+  content: attr(data-word);
+  position: absolute;
+  margin-top: 25px;
+  right: 50px;
+  padding: 10px 20px;
+  width: auto;
+  height: auto;
+  background-color: #4a4a4a;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+  opacity: 1;
+}
+.spacebar:after {
+  content: '&nbsp;';
+  color: transparent;
+}
+.speak, .hear {
+  color: #fff;
+  font-size: x-large;
+  border-radius: 100%;
+  /*background-color: #2980b9;*/
+  background-color: #73a4c3;
+  padding: 10px 30px;
+  /*padding: 0.4em;*/
+  /*border: 6px solid #73a4c3;*/
+}
+.speak:hover,
+.hear:hover {
+  background-color: #3498DB;
+}
+.speak.listening {
+  background-color: #3498DB;
+  animation: pulse .8s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+    padding: 10px 30px;
+    box-shadow: 0 0 0 0 #3498DB;
+  }
+  50% {
+    /*padding: 20px 60px;*/
+    padding: 10px 30px;
+  }
+  99% {
+    padding: 10px 30px;
+    /*box-shadow: 0 0 0 1em transparent;*/
+    box-shadow: 0 0 0 35px transparent;
+  }
+}
+
+/* Charmenu */
+#charmenu {
+  position: absolute;
+  top: 0;
+  left: 64px;
+  right: 20px;
+  padding: 0 12px 10px 12px;
+  font: normal normal normal 50px/1 'Lato';
+  letter-spacing: 20px;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+/* Back Button for Lesson */
+.goback, .gohome {
+  position: absolute;
+  top: 0.08em;
+  font-size: 2em;
+  z-index: 1;
+}
+.goback {
+  left: 0.8em;
+}
+.gohome {
+  right: 0.8em;
+}

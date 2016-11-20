@@ -1,0 +1,416 @@
+@import url("../../../libraries/polyui/polyui.css");
+@import url("../../../libraries/alertify/themes/alertify.core.css");
+@import url("../../../libraries/alertify/themes/alertify.default.css");
+@import url("../../../libraries/font-awesome/font-awesome.css");
+@import url("../../../libraries/font-awesome/macset.css");
+@import url("../../../libraries/codemirror/lib/codemirror.css");
+@import url("../../../libraries/codemirror/addon/fold/foldgutter.css");
+@import url("../../../libraries/codemirror/addon/lint/lint.css");
+@import url("../../../libraries/codemirror/addon/dialog/dialog-custom.css");
+@import url("../../../libraries/codemirror/addon/hint/show-hint.css");
+@import url("../../../libraries/codemirror/inlet.css");
+@import url("../../../libraries/codemirror/jqueryminicolors.css");
+@import url("../../../css/lessongrid.css");
+@import url("../../../css/vars.css");
+
+/* Navigation Bar */
+.dictionary {
+  height: calc(100vh - 51px);
+}
+.header {
+  position: absolute;
+  background-color: #52bab3;
+  z-index: 0;
+}
+.hold-menu-btns {
+  width: 100vw;
+  left: 0;
+}
+.hold-buttons {
+  right: 0;
+}
+.header .apptitle,
+.header .add {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  height: 51px;
+/*  font-size: 21px;*/
+}
+.header .apptitle {
+  padding-right: 0;
+}
+.header .apptitle:hover {
+  opacity: 1;
+}
+.header .add {
+  float: right;
+  margin-right: 15px;
+  padding: 0 15px;
+  font-size: 20px;
+  border-radius: 0;
+}
+.code-container-fill,
+.dictionary-container-fill {
+  width: 100vw;
+  position: fixed;
+  top: 51px;
+  z-index: 1;
+}
+.notes-container-fill {
+  width: 100vw;
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  z-index: 1;
+  overflow: auto;
+  background: #c2f0fe;
+}
+.code-container-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+/*  background: rgba(0, 0, 0, 0.5);*/
+}
+.code-container {
+  position: absolute;
+  right: 0;
+/*  height: 214px;*/
+  width: 100vw;
+  height: calc(100vh - 51px);
+  background: transparent;
+}
+.lessons-code {
+  height: 100%;
+  resize: none;
+}
+.header.hold-buttons {
+  display: block;
+  width: calc(100vw - 146px);
+  overflow: hidden;
+}
+.notesmenu {
+  position: absolute;
+/*  right: 47px;*/
+  right: 63px;
+  width: calc(100vw - 207px);
+  height: 51px;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.notesmenu .add {
+  float: none;
+}
+
+/* Active Menu Icons */
+#menuicon:checked ~ .header.hold-menu-btns > .menuicon {
+  border-radius: 0;
+  background: #489893;
+}
+.icon-code.active,
+.dictionary.active,
+.icon-sticky.active {
+  border-radius: 0;
+  background: #489893;
+}
+.menuicon.active::after,
+.icon-code.active::after,
+.dictionary.active::after,
+.icon-sticky.active::after {
+  content: "";
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -15px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 20px 6px #fff;
+  opacity: 1;
+}
+
+/* Editor */
+.CodeMirror {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  width: 100%;
+}
+/*
+.CodeMirror, .CodeMirror-gutters {
+  height: 100%!important;
+}
+*/
+.CodeMirror, .CodeMirror-activeline-background {
+  height: 100%!important;
+}
+.CodeMirror {
+  background: rgba(255, 255, 255, 0.5)!important;
+}
+.CodeMirror-activeline-background {
+/*  background: rgb(232, 242, 255);*/
+  background: #fff!important;
+}
+.CodeMirror .cm-palette-hint {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: -2px 2px 0 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  box-shadow: 0 0 1px 2px #fff,
+              0 0 1px 3px #a0a09c;
+}
+.lint-error {
+  font-family: arial;
+  font-size: 70%;
+  padding: 2px 5px 3px;
+  background: #ffa;
+  color: #a00;
+}
+.lint-error-icon {
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0 3px;
+  margin-right: 7px;
+  color: #fff;
+  background-color: #f00;
+}
+
+/* Skill Container */
+.skill-container {
+  position: absolute;
+  left: auto;
+  top: 51px;
+  bottom: 0;
+  width: 100vw;
+  height: calc(100vh - 51px);
+  z-index: 0;
+  overflow: auto;
+}
+.skillcontainer,
+.skilltitlebar {
+  margin: 1em 0;
+}
+.skilltitlebar, .skill, .btn {
+  color: #fff;
+  background-color: #52bab3;
+  border-radius: .5em;
+/*
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+*/
+}
+.skills {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  padding: 1em;
+  margin: auto;
+}
+.skills > div > h1 {
+  text-align: center;
+}
+.skill, .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 0;
+  color: #fff;
+  font-size: 0.875em;
+  font-weight: 400;
+  transition: opacity 0.3s;
+}
+.skillcontainer .lessons-container {
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border-radius: .5em;
+  background-color: transparent;
+  background-color: #52bab3;
+}
+.lesson-note,
+.lesson-flyer {
+  white-space: normal;
+  width: 244px!important;
+}
+.editLesson,
+.deleteLesson {
+  position: relative;
+  top: 10px;
+  width: 0;
+  height: 0;
+  font: normal normal normal 36px/0 FontAwesome;
+}
+.editLesson {
+  left: calc(-68%);
+}
+.deleteLesson {
+  right: calc(-50%);
+}
+[data-skill=name][contentEditable]:focus {
+  border: 0;
+  outline: 0;
+}
+
+/* Designer */
+.designer-container-fill {
+  width: 100vw;
+  position: fixed;
+  top: 51px;
+  height: calc(100vh - 51px);
+  z-index: 1;
+  overflow: auto;
+  background: #c2f0fe;
+}
+.designer-pages .addedpages,
+.designer-pages .addpages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 68px;
+  float: left;
+  white-space: nowrap;
+  overflow: auto;
+}
+.designer-pages .designer-box {
+  cursor: pointer;
+  display: inline-block;
+  padding: 35px 4px 35px 20px;
+  background: #fff;
+  border: 0;
+  text-align: center;
+  margin: 0;
+  margin-right: -5px;
+}
+.designer-pages .designer-box {
+  padding: 35px 20px;
+}
+.designer-pages .designer-box.active {
+  background-color: #bdebf9;
+  color: #7b7e83;
+}
+.designer-pages .designer-box .delpage {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: -35px;
+}
+.designer-pages .addpage {
+  padding: 39px 30px;
+  height: 100%;
+  float: right;
+}
+.designer-pages,
+.designer-pages .addedpages,
+.designer-pages .addpages,
+.designer-pages .designer-box {
+/*  box-shadow: inset 12px -12px 29px -10px #67787d;*/
+  box-shadow: inset 0 -12px 29px -10px #67787d;
+}
+.designer-canvas {
+  position: absolute;
+  top: 94px;
+  width: 100%;
+  height: calc(100vh - 145px);
+  overflow: auto;
+}
+
+/* Phone UI */
+@media all and (max-width: 600px) {
+  .hold-menu-btns {
+    position: absolute;
+    width: 100vw;
+  }
+  .header .apptitle {
+    width: 100vw;
+    text-align: right;
+    padding-right: 30px;
+    border-radius: 0;
+  }
+  .hold-buttons {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 80px;
+    height: 100vh!important;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .header .add {
+    display: block;
+    width: 80px;
+    float: none;
+  }
+  .notesmenu {
+    position: absolute;
+    left: 0;
+    height: calc(100vh - 103px);
+    white-space: normal;
+    overflow: auto;
+  }
+  .notesmenu .add {
+    display: block;
+  }
+  .menuicon {
+    display: block!important;
+    position: absolute;
+    top: 0;
+    padding: 15px;
+  }
+  .header.hold-buttons {
+    display: none;
+  }
+  #menuicon:checked ~ .header.hold-buttons {
+    display: block;
+    width: 80px;
+    height: calc(100vh - 51px)!important;
+  }
+  .icon-code.active::after,
+  .dictionary.active::after,
+  .icon-sticky.active::after {
+    margin-top: 10px!important;
+    margin-left: -12px!important;
+    width: 1px!important;
+    height: 1px!important;
+    box-shadow: 0 0 60px 10px #fff!important;
+  }
+  .code-container-bg {
+    display: none!important;
+  }
+
+  .skill-container,
+  .skill-container .grid {
+    width: 100%!important ;
+  }
+  
+  #menuicon:checked ~ .code-container-fill > .code-container,
+  #menuicon:checked ~ .notes-container-fill,
+  #menuicon:checked ~ .designer-container-fill,
+  #menuicon:checked ~ .dictionary-container-fill,
+  #menuicon:checked ~ .skill-container {
+    width: calc(100vw - 80px)!important;
+    left: 80px;
+  }
+  #menuicon:checked ~ .notes-container-fill .grid__col--12 {
+    padding: 0 calc(100vw - 80px - 100%)!important;
+  }
+  #menuicon:checked ~ .skill-container .grid {
+    width: calc(100vw - 80px);
+  }
+}

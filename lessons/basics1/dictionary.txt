@@ -1,0 +1,8 @@
+مرحبا = hello
+رجل = man
+امراه = woman
+ولد = boy
+بنت = girl
+انا = I; I am; me
+مع السلامه = goodbye
+اهلا = hi; welcome

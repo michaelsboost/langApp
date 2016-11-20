@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>skillMaker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="description" content="Easily design ArabEngo skills.">
+    <meta name="author" content="Michael Schwartz">
+    <link rel="stylesheet" href="css/skillMaker.css" />
+    <script src="../../libraries/jquery/jquery.js"></script>
+    <script src="../../libraries/alertify/alertify.min.js"></script>
+    <script src="../../libraries/jszip/Blob.js"></script>
+    <script src="../../libraries/jszip/FileSaver.js"></script>
+    <script src="../../libraries/jszip/jszip-utils.js"></script>
+    <script src="../../libraries/jszip/jszip.min.js"></script>
+    
+    <script src="../../libraries/jsbeautify/beautify.js"></script>
+    <script src="../../libraries/jsbeautify/beautify-css.js"></script>
+    <script src="../../libraries/jsbeautify/beautify-html.js"></script>
+    <script src="../../libraries/jsbeautify/unpackers/javascriptobfuscator_unpacker.js"></script>
+    <script src="../../libraries/jsbeautify/unpackers/urlencode_unpacker.js"></script>
+    <script src="../../libraries/jsbeautify/unpackers/p_a_c_k_e_r_unpacker.js"></script>
+    <script src="../../libraries/jsbeautify/unpackers/myobfuscate_unpacker.js"></script>
+    <script src="../../libraries/jsbeautify/htmlTidy.js"></script>
+    
+    <script src="../../libraries/codemirror/lib/codemirror.js"></script>
+    <script src="../../libraries/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../../libraries/codemirror/mode/xml/xml.js"></script>
+    <script src="../../libraries/codemirror/mode/css/css.js"></script>
+    <script src="../../libraries/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="../../libraries/codemirror/addon/palette.js"></script>
+    <script src="../../libraries/codemirror/addon/edit/closetag.js"></script>
+    <script src="../../libraries/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="../../libraries/codemirror/addon/selection/active-line.js"></script>
+    <script src="../../libraries/codemirror/addon/fold/foldcode.js"></script>
+    <script src="../../libraries/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="../../libraries/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="../../libraries/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="../../libraries/codemirror/addon/fold/comment-fold.js"></script>
+    <script src="../../libraries/codemirror/addon/search/search.js"></script>
+    <script src="../../libraries/codemirror/addon/search/searchcursor.js"></script>
+    <script src="../../libraries/codemirror/addon/dialog/dialog.js"></script>
+    <script src="../../libraries/codemirror/addon/hint/show-hint.js"></script>
+    <script src="../../libraries/codemirror/addon/hint/xml-hint.js"></script>
+    <script src="../../libraries/codemirror/addon/hint/html-hint.js"></script>
+    <script src="../../libraries/codemirror/addon/hint/css-hint.js"></script>
+    <script src="../../libraries/codemirror/addon/hint/javascript-hint.js"></script>
+    <script src="../../libraries/codemirror/addon/search/match-highlighter.js"></script>
+    <script src="../../libraries/codemirror/htmlhint-custom.js"></script>
+    <script src="../../libraries/codemirror/csslint.js"></script>
+    <script src="../../libraries/codemirror/jshint.js"></script>
+    <script src="../../libraries/codemirror/addon/lint/lint.js"></script>
+    <script src="../../libraries/codemirror/addon/lint/html-lint.js"></script>
+    <script src="../../libraries/codemirror/addon/lint/css-lint.js"></script>
+    <script src="../../libraries/codemirror/addon/lint/javascript-lint.js"></script>
+    <script src="../../libraries/codemirror/inlet.min.js"></script>
+    <script src="../../libraries/codemirror/emmet.js"></script>
+    <script src="../../libraries/codemirror/addon/search/goto-line.js"></script>
+    <script src="../../libraries/codemirror/markdown.js"></script>
+    <script src="../../libraries/codemirror/continuelist.js"></script>
+  </head>
+  <body>
+    <input id="menuicon" class="hide" type="checkbox" checked>
+    <span class="header hold-menu-btns">
+      <div class="btn--default apptitle"></div>
+      <!--<button class="btn--default fa fa-bars add menuicon pointer"></button>-->
+      <label for="menuicon" class="btn--default fa fa-bars add menuicon pointer" style="padding-top: 15px;"></label>
+    </span>
+    <span class="header hold-buttons">
+      <button class="btn--default fa fa-times add" style="display: none;" data-design="lesson"></button>
+      <button class="btn--default fa fa-download add" data-download="skill"></button>
+      <button class="btn--default fa fa-code add icon-code" data-view="code"></button>
+      <button class="btn--default fa fa-book add dictionary" data-add="dictionary"></button>
+      <button class="btn--default fa fa-sticky-note add icon-sticky" data-add="notes"></button>
+      <button class="btn--default fa fa-file add" data-clear="storage"></button>
+      <span id="notesmenu" class="hide notesmenu" data-design="notes">
+        <button class="btn--default fa fa-download add" data-download="skill"></button>
+        <button class="btn--default fa fa-undo add" data-action="undo"></button>
+        <button class="btn--default fa fa-repeat add" data-action="redo"></button>
+        <button class="btn--default add" data-action="h1">h1</button>
+        <button class="btn--default add" data-action="h2">h2</button>
+        <button class="btn--default fa fa-header add" data-action="boldhead"></button>
+        <button class="btn--default fa fa-bold add" data-action="bold"></button>
+        <button class="btn--default fa fa-paragraph add" data-action="paragraph"></button>
+        <button class="btn--default fa fa-italic add" data-action="italic"></button>
+        <button class="btn--default fa fa-underline add" data-action="underline"></button>
+        <button class="btn--default fa fa-strikethrough add" data-action="strikethrough"></button>
+        <button class="btn--default fa fa-link add" data-action="link"></button>
+        <button class="btn--default fa fa-unlink add" data-action="unlink"></button>
+        <button class="btn--default fa fa-image add" data-action="image"></button>
+        <button class="btn--default fa fa-code add icon-code" data-view="notesCode"></button>
+      </span>
+    </span>
+
+    <div class="hide notes-container-fill">
+      <div class="notes-container">
+        <div class="underline-links">
+          <h4 id="type" class="grid">&nbsp;</h4>
+
+          <div class="breakword grid" style="background-color: #fefff6; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);">
+            <div class="centered grid__col--12" data-edit="notes" style="padding: 0 calc(100vw - 100%);">
+              <h1 class="headline-primary--grouped txtcenter">Heading 1</h1>
+              <h2 class="headline-secondary--grouped modintoh2">Heading 2</h2>
+              <b class="bold-heading">Bold heading</b>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus omnis accusantium dignissimos ullam perspiciatis, similique nam libero quibusdam voluptas tenetur. Iusto officiis, velit est accusantium magnam, provident obcaecati fuga aliquid.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hide code-container-fill">
+      <div class="code-container-bg"></div>
+      <div class="code-container">
+        <textarea id="htmlEditor" class="lessons-code" data-code="output" data-code="html"></textarea>
+      </div>
+    </div>
+    <div class="hide dictionary-container-fill">
+      <div class="dictionary-container">
+        <textarea class="dictionary" data-code="dictionary">Dictionary words</textarea>
+      </div>
+    </div>
+    
+    <!-- Skill Container -->
+    <div class="skill-container">
+      <div class="grid skills">
+        <div class="grid__col--12">
+          <p>&nbsp;</p>
+          <h1>Skill/Course</h1>
+          <p>&nbsp;</p>
+
+          <div class="skillcontainer">
+            <div class="skilltitlebar">
+              <span class="skill capitalize" data-set="editable" data-skill="name">Basics 1</span>
+              <button class="btn--default ib wauto fa fa-plus add fr" data-add="lesson" style="padding-top: 17px; padding-left: 0;"></button>
+            </div>
+
+            <!-- Lessons -->
+            <div class="lessons-container fl">
+              <div class="lesson-note txtcenter">
+                <h2>Tips And Notes</h2>
+
+                <a class="pointer" href="javascript:void(0)" style="margin-bottom: 19.92px;">
+                  <img src="../imgs/notes.svg" alt="Tips and Notes" style="height: 124px; /* box-shadow: 0 12px 24px -12px #8e8e8e; */">
+                </a>
+
+                <a class="btn--default gotolesson" href="javascript:void(0)">view</a>
+              </div>
+              <span data-place="lesson"></span>
+              <div class="lesson-chat lesson-flyer txtcenter">
+                <h2>Lesson Counter</h2>
+
+                <div style="font-size: 70px; margin: auto auto 19px auto; height: 93px;">
+                  <a class="pointer" href="javascript:void(0)">
+                    <i class="fa fa-comment"></i>
+                  </a>
+                </div>
+
+                10 Minutes a Day, Fluency in 3 Months!
+
+                <p></p>
+
+                <a class="btn--default pointer gotolesson" href="javascript:alertify.log('coming soon...')">chat now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../libraries/codemirror/inlet.min.js"></script>
+    <script src="js/skillMaker.js"></script>
+  </body>
+</html>
