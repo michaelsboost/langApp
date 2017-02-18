@@ -208,7 +208,13 @@ var remWord        = "",
       //console.log("Type String: " + str);
       //console.log("Remember Word: " + remWord);
       //console.log("Next String: " + nextStr);
+    },
+    audioKey       = document.createElement("audio"),
+    keySound  = function() {
+      audioKey.setAttribute("src", "../../sounds/effects/keypress.mp3");
+      audioKey.play();
     };
+
 
 // Speak first message
 setTimeout(function() {
@@ -225,6 +231,9 @@ $(".keyboard button:contains('"+ typeIt +"')").not(".ignore").addClass("active")
 $(".keyboard").each(function(i) {
   $(".keyboard").eq(i).on("click", "> div .active", function(e) {
     $(".keyboard").eq( Number(!i) ).append(this);
+    
+    // Keypress type sound effect
+    keySound();
 
     $(".keyboard").find(".active").on("click", function(e) {
       if ($(e.target).hasClass("active")) {
@@ -235,6 +244,9 @@ $(".keyboard").each(function(i) {
     }).trigger("click");
     return false;
   });
+});
+$("label[for=shift]").click(function() {
+  keySound();
 });
 
 // Detect pressed letter
