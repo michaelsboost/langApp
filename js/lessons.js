@@ -30,6 +30,7 @@ var counter = 0;
     parentPage = window.location.toString().split(/\?|#/)[0],
     audioElement  = document.createElement("audio"),
     audioWord     = document.createElement("audio"),
+    keyLetter     = document.createElement("audio"),
     successSound  = function() {
       audioElement.setAttribute("src", "../../sounds/effects/success.mp3");
       audioElement.play();
@@ -41,6 +42,10 @@ var counter = 0;
     wrongSound    = function() {
       audioElement.setAttribute("src", "../../sounds/effects/wrong.mp3");
       audioElement.play();
+    },
+    keySound    = function() {
+      keyLetter.setAttribute("src", "../../sounds/effects/keypress.mp3");
+      keyLetter.play();
     },
     wrongAnswer   = function(answer, call) {
       wrongSound();
@@ -293,7 +298,8 @@ $(document).ready(function() {
       $(".charmenu a").on("click", function() {
         $val = $("." + $("input:checked").attr("id") + " .userSentence").val();
         $("." + $("input:checked").attr("id") + " .userSentence").val( $val + this.textContent );
-
+        keySound();
+        
         // Is this correct?
         if ( $val === $("." + $("input:checked").attr("id") + " .answer").text() ) {
           $("." + $("input:checked").attr("id") + " .checkSentence").trigger("click");
@@ -303,6 +309,14 @@ $(document).ready(function() {
       $(".delword").on("click", function() {
         $val = $("." + $("input:checked").attr("id") + " .userSentence").val();
         $("." + $("input:checked").attr("id") + " .userSentence").val($val.slice(0, -1));
+        keySound();
+        return false;
+      });
+      // Spacebar
+      $(".wordlist").on("click", function() {
+        $val = $("." + $("input:checked").attr("id") + " .userSentence").val();
+        $("." + $("input:checked").attr("id") + " .userSentence").val( $val + " " );
+        keySound();
         return false;
       });
 
