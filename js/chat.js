@@ -219,7 +219,8 @@ var intervalChat,
                 $(".bottom-bar").remove();
                 
                 UIkit.modal.alert("<h3>Fantastic! You've completed the lesson!").then(function() {
-                  location.reload("true");
+                  window.location.href = "../../index.html";
+                  // location.reload("true");
                 });
                 finishedLesson();
                 speakSentence();
