@@ -165,7 +165,7 @@ var intervalChat,
 
       // Remember typed word
       remWord = remWord += typeIt;
-      $("h1").text(remWord);
+      $(".preview h1").text(remWord);
       // alertify.log(nextStr);
 
       if (!nextStr) {
