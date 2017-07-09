@@ -5,179 +5,248 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <link rel="stylesheet" href="../../libraries/uikit/css/uikit.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="../../css/chat.css">
     <script src="../../libraries/jquery/jquery.js"></script>
     <script src="../../libraries/alertify/alertify.min.js"></script>
     <script src="../../js/responsivevoice.js"></script>
+    <script src="../../libraries/uikit/js/uikit.min.js"></script>
+    <script src="../../libraries/uikit/js/uikit-icons.min.js"></script>
   </head>
   <body>
-    <div class="contact-bar">
-      <!--Contact Gender MUST be male or female-->
-      <i class="contact-pic fa fa-user"></i> <span data-gender="male">Michael Khoury</span>
-    </div>
-    
-    <div class="chat-container">
-      <div class="chat-history">
-        <!--
-          Bot talks, you talk, bot talks, you talk...
-          That's how the app is configured.
-          Chat ends when the bot says goodbye, followed by your goodbye response.
-        -->
-        
-        <div class="them msg">
-          <p class="message" data-meaning="Welcome!">Welcome!</p>
+    <div class="uk-offcanvas-content">
+      <div class="contact-bar">
+        <!--Contact Gender MUST be male or female-->
+        <div class="ib fl contactbtns cb-left">
+          <a href="../">
+            <span class="fa fa-caret-left scale"></span>
+          </a>
+          <a class="pointer" data-call="share">
+            <span class="fa fa-share-square-o scale"></span>
+          </a>
         </div>
-        <div class="tar you msg hide">
-          <p class="message" data-meaning="Hello!">Hello!</p>
-        </div>
-        <div class="them msg hide">
-          <p class="message" data-meaning="My name is ...">My name is ...</p>
-        </div>
-        <div class="tar you msg hide">
-          <p class="message" data-meaning="Nice to meet you">Nice to meet you</p>
-        </div>
-        <div class="them msg hide">
-          <p class="message" data-meaning="Thanks you too">Thanks you too</p>
-        </div>
-        <div class="tar you msg hide">
-          <p class="message" data-meaning="How are you?">How are you?</p>
-        </div>
-        <div class="them msg hide">
-          <p class="message" data-meaning="I'm good and you?">I'm good and you?</p>
-        </div>
-        <div class="tar you msg hide">
-          <p class="message" data-meaning="I'm good. Thank you!">I'm good. Thank you!</p>
-        </div>
-        <div class="them msg hide">
-          <p class="message" data-meaning="Goodbye">Goodbye</p>
-        </div>
-        <div class="tar you msg hide">
-          <p class="message" data-meaning="Goodbye">Goodbye</p>
-        </div>
-        <div class="them msg hide">
-          <p class="message"></p>
+        <span class="pointer" data-person="Kareem Shamon" data-gender="male" uk-toggle="target: #user-info"></span>
+
+        <div class="ib fr contactbtns cb-right">
+          <a class="pointer">
+            <span class="fa fa-phone scale"></span>
+          </a>
+          <a class="pointer largephone">
+            <span class="fa fa-video-camera scale"></span>
+          </a>
+          <a class="pointer" uk-toggle="target: #user-info">
+            <span class="fa fa-user-circle-o scale"></span>
+          </a>
         </div>
       </div>
-      
-      <div class="them typingloader hide">
-        <div class="message">
-          <div class="typing">
-            <div class="load1"></div>
-            <div class="load2"></div>
-            <div class="load3"></div>
+
+      <div class="sharelist hide">
+        <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//mikethedj4.github.io/ArabEngo/" target="_blank">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a class="share-twitter" href="https://twitter.com/home?status=Learn%20%23Arabic%20for%20%23English%20Speakers%20with%20%23ArabEngo%20%23ArabEngoChat%20-%20http%3A//mikethedj4.github.io/ArabEngo/" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a class="share-gplus" href="https://plus.google.com/share?url=http%3A//mikethedj4.github.io/ArabEngo/" target="_blank">
+          <i class="fa fa-google-plus"></i>
+        </a>
+        <a class="share-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//mikethedj4.github.io/ArabEngo/&title=Learn%20%23Arabic%20for%20%23English%20Speakers%20with%20%23ArabEngo%20%23ArabEngoChat&summary=&source=" target="_blank">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </div>
+    
+      <div class="chat-container">
+        <div class="chat-history">
+          <!--
+            Bot talks, you talk, bot talks, you talk...
+            That's how the app is configured.
+            Chat ends when the bot says goodbye, followed by your goodbye response.
+          -->
+
+          <div class="them msg">
+            <p class="message" data-meaning="Welcome!">Welcome!</p>
+          </div>
+          <div class="tar you msg hide">
+            <p class="message" data-meaning="Hello!">Hello!</p>
+          </div>
+          <div class="them msg hide">
+            <p class="message" data-meaning="My name is ...">My name is ...</p>
+          </div>
+          <div class="tar you msg hide">
+            <p class="message" data-meaning="Nice to meet you">Nice to meet you</p>
+          </div>
+          <div class="them msg hide">
+            <p class="message" data-meaning="Thanks you too">Thanks you too</p>
+          </div>
+          <div class="tar you msg hide">
+            <p class="message" data-meaning="How are you?">How are you?</p>
+          </div>
+          <div class="them msg hide">
+            <p class="message" data-meaning="I'm good and you?">I'm good and you?</p>
+          </div>
+          <div class="tar you msg hide">
+            <p class="message" data-meaning="I'm good. Thank you!">I'm good. Thank you!</p>
+          </div>
+          <div class="them msg hide">
+            <p class="message" data-meaning="Goodbye">Goodbye</p>
+          </div>
+          <div class="tar you msg hide">
+            <p class="message" data-meaning="Goodbye">Goodbye</p>
+          </div>
+        </div>
+
+        <div class="them typingloader hide">
+          <div class="message">
+            <div class="typing">
+              <div class="load1"></div>
+              <div class="load2"></div>
+              <div class="load3"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     
-    <!--Hold shift for capital letters-->
-    <input type="checkbox" id="shift" class="hide">
-    
-    <div class="bottom-bar">
-      <div class="preview">
-        <h1></h1>
+      <!--Hold shift for capital letters-->
+      <input type="checkbox" id="shift" class="hide">
+
+      <div class="bottom-bar">
+        <div class="preview">
+          <h1></h1>
+        </div>
+        <div class="keyboard notxtsel">
+          <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>0</button>
+          </div>
+          <div data-action="lowercasetxt">
+            <div>
+              <button>q</button>
+              <button>w</button>
+              <button>e</button>
+              <button>r</button>
+              <button>t</button>
+              <button>y</button>
+              <button>u</button>
+              <button>i</button>
+              <button>o</button>
+              <button>p</button>
+              <button>a</button>
+            </div>
+            <div>
+              <button>s</button>
+              <button>d</button>
+              <button>f</button>
+              <button>g</button>
+              <button>h</button>
+              <button>j</button>
+              <button>k</button>
+              <button>l</button>
+              <button>z</button>
+              <button>x</button>
+              <button>c</button>
+            </div>
+            <div>
+              <button>v</button>
+              <button>b</button>
+              <button>n</button>
+              <button>m</button>
+              <button>#</button>
+              <button>'</button>
+              <button>,</button>
+              <button>.</button>
+              <button>!</button>
+              <button>?</button>
+              <label for="shift" class="ignore">
+                shift
+              </label>
+            </div>
+          </div>
+          <div class="hide" data-action="uppercasetxt">
+            <div>
+              <button>Q</button>
+              <button>W</button>
+              <button>E</button>
+              <button>R</button>
+              <button>T</button>
+              <button>Y</button>
+              <button>U</button>
+              <button>I</button>
+              <button>O</button>
+              <button>P</button>
+              <button>A</button>
+            </div>
+            <div>
+              <button>S</button>
+              <button>D</button>
+              <button>F</button>
+              <button>G</button>
+              <button>H</button>
+              <button>J</button>
+              <button>K</button>
+              <button>L</button>
+              <button>Z</button>
+              <button>X</button>
+              <button>C</button>
+            </div>
+            <div>
+              <button>V</button>
+              <button>B</button>
+              <button>N</button>
+              <button>M</button>
+              <button>#</button>
+              <button>'</button>
+              <button>,</button>
+              <button>.</button>
+              <button>!</button>
+              <button>?</button>
+              <label for="shift" class="ignore">
+                shift
+              </label>
+            </div>
+          </div>
+          <div>
+            <button class="spacebar"> </button>
+          </div>
+        </div>
       </div>
-      <div class="keyboard notxtsel">
-        <div>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button>0</button>
-        </div>
-        <div data-action="lowercasetxt">
-          <div>
-            <button>q</button>
-            <button>w</button>
-            <button>e</button>
-            <button>r</button>
-            <button>t</button>
-            <button>y</button>
-            <button>u</button>
-            <button>i</button>
-            <button>o</button>
-            <button>p</button>
-            <button>a</button>
+
+      <div id="user-info" class="bright" uk-offcanvas="mode: reveal; flip: true; overlay: true">
+        <div class="uk-offcanvas-bar">
+
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+          
+          <div class="tc cur-defaut avatarbg" style="background-image: url('../../imgs/kareem.svg')">&nbsp;</div>
+          <div class="tc">
+            <input id="setGender" data-call="gender" type="checkbox" disabled checked />
+            <label for="setGender" class="gender" data-gender="male"></label>
           </div>
-          <div>
-            <button>s</button>
-            <button>d</button>
-            <button>f</button>
-            <button>g</button>
-            <button>h</button>
-            <button>j</button>
-            <button>k</button>
-            <button>l</button>
-            <button>z</button>
-            <button>x</button>
-            <button>c</button>
+          <h3 class="tc nameoutput" data-output="name" class="tc"></h3>
+          <h4 class="location">
+            <span class="uk-margin-small-right" uk-icon="icon: location"></span> Chicago, IL
+          </h4>
+
+          <h1 class="uk-nav-header">Bio</h1>
+          <p>This is a beginner sample chat made by <a href="http://mikethedj4.github.io/">Michael Schwartz</a>.</p> <p>Enjoy!</p>
+          
+          <div class="donatebtns">
+            <a href="https://cash.me/$mschwar4" target="_blank">
+              <img src="../../imgs/square_cash.svg" alt="Donate via SquareCash">
+            </a>
+            <a href="https://www.paypal.me/mikethedj4" target="_blank">
+              <img src="../../imgs/paypal.svg" alt="Donate via PayPal">
+            </a>
           </div>
-          <div>
-            <button>v</button>
-            <button>b</button>
-            <button>n</button>
-            <button>m</button>
-            <button>#</button>
-            <button>'</button>
-            <button>,</button>
-            <button>.</button>
-            <button>!</button>
-            <button>?</button>
-            <label for="shift" class="ignore">
-              shift
-            </label>
-          </div>
-        </div>
-        <div class="hide" data-action="uppercasetxt">
-          <div>
-            <button>Q</button>
-            <button>W</button>
-            <button>E</button>
-            <button>R</button>
-            <button>T</button>
-            <button>Y</button>
-            <button>U</button>
-            <button>I</button>
-            <button>O</button>
-            <button>P</button>
-            <button>A</button>
-          </div>
-          <div>
-            <button>S</button>
-            <button>D</button>
-            <button>F</button>
-            <button>G</button>
-            <button>H</button>
-            <button>J</button>
-            <button>K</button>
-            <button>L</button>
-            <button>Z</button>
-            <button>X</button>
-            <button>C</button>
-          </div>
-          <div>
-            <button>V</button>
-            <button>B</button>
-            <button>N</button>
-            <button>M</button>
-            <button>#</button>
-            <button>'</button>
-            <button>,</button>
-            <button>.</button>
-            <button>!</button>
-            <button>?</button>
-            <label for="shift" class="ignore">
-              shift
-            </label>
-          </div>
-        </div>
-        <div>
-          <button class="spacebar"> </button>
+          
         </div>
       </div>
     </div>
