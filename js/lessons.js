@@ -32,19 +32,19 @@ var counter = 0;
     audioWord     = document.createElement("audio"),
     keyLetter     = document.createElement("audio"),
     successSound  = function() {
-      audioElement.setAttribute("src", "../../sounds/effects/success.mp3");
+      audioElement.setAttribute("src", "../../sounds/success.mp3");
       audioElement.play();
     },
     errorSound    = function() {
-      audioElement.setAttribute("src", "../../sounds/effects/error.mp3");
+      audioElement.setAttribute("src", "../../sounds/error.mp3");
       audioElement.play();
     },
     wrongSound    = function() {
-      audioElement.setAttribute("src", "../../sounds/effects/wrong.mp3");
+      audioElement.setAttribute("src", "../../sounds/wrong.mp3");
       audioElement.play();
     },
     keySound    = function() {
-      keyLetter.setAttribute("src", "../../sounds/effects/keypress.mp3");
+      keyLetter.setAttribute("src", "../../sounds/keypress.mp3");
       keyLetter.play();
     },
     wrongAnswer   = function(answer, call) {
